@@ -19,12 +19,7 @@ steps
 {
 sh 'mvn test'
 }
-post {
-always
-{
-junit 'target/surfire-reports/*.xml'
-}
-}
+
 }
 }
 }
