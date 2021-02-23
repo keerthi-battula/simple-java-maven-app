@@ -5,12 +5,6 @@ agent any
         jdk 'JDK11'
     }
 stages {
-stage ('bulid')
-{
-steps {
-bat 'mvn -B -DskipTests clean package'
-}
-}
 stage("build & SonarQube analysis") {
             
             steps {
