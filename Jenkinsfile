@@ -11,15 +11,7 @@ steps {
 bat 'mvn -B -DskipTests clean package'
 }
 }
-stage ('test')
-{
-steps 
-{
-bat 'mvn test'
-}
-
-}
-    stage("build & SonarQube analysis") {
+stage("build & SonarQube analysis") {
             
             steps {
               withSonarQubeEnv('sonar-server') {
